@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Admin - Vainilla</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f8f6f6;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+
+
+.sidebar{
+    width:250px;
+    background:linear-gradient(180deg,#d9899f,#d47c96);
+    color:white;
+    padding:25px 20px;
+}
+
+.logo{
+    font-size:34px;
+    font-style:italic;
+    text-align:center;
+    margin-bottom:30px;
+    font-weight:300;
+}
+
+.profile{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+.profile img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.profile h4{
+    font-size:14px;
+}
+
+.profile p{
+    font-size:12px;
+    opacity:.8;
+}
+
+.menu{
+    list-style:none;
+}
+
+.menu li{
+    margin-bottom:12px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 12px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.menu a:hover,
+.menu .active{
+    background:rgba(255,255,255,.18);
+}
+
+
+
+.main{
+    flex:1;
+    padding:35px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.header h1{
+    font-size:32px;
+    color:#444;
+}
+
+.btn{
+    background:#df8aa1;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#d67591;
+}
+
+
+
+.card{
+    background:white;
+    border-radius:15px;
+    box-shadow:0 2px 15px rgba(0,0,0,.05);
+    overflow:hidden;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#fafafa;
+}
+
+th{
+    text-align:left;
+    padding:18px;
+    color:#666;
+    font-size:14px;
+}
+
+td{
+    padding:18px;
+    border-top:1px solid #f1f1f1;
+    color:#555;
+}
+
+.badge{
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.pendiente{
+    background:#ffd9e3;
+    color:#cc5878;
+}
+
+.proceso{
+    background:#ffe8c9;
+    color:#d68a18;
+}
+
+.entregado{
+    background:#dff3e5;
+    color:#37995a;
+}
+
+.btn-view{
+    border:none;
+    background:#f2f2f2;
+    padding:7px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    color:#666;
+}
+
+.btn-view:hover{
+    background:#e8e8e8;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <div class="logo">Vainilla</div>
+
+        <div class="profile">
+            <img src="https://i.pravatar.cc/100?img=5">
+            <div>
+                <h4>Hola, Admin</h4>
+                <p>Administradora</p>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li><a href="#"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+            <li><a class="active" href="#"><i class="fa-solid fa-bag-shopping"></i> Pedidos</a></li>
+            <li><a href="#"><i class="fa-solid fa-users"></i> Clientes</a></li>
+            <li><a href="#"><i class="fa-solid fa-tags"></i> Cotizaciones</a></li>
+            <li><a href="#"><i class="fa-solid fa-calendar-days"></i> Agendamiento</a></li>
+            <li><a href="#"><i class="fa-solid fa-star"></i> Reviews</a></li>
+            <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a></li>
+        </ul>
+
+    </aside>
+
+    <main class="main">
+
+        <div class="header">
+            <h1>Pedidos recibidos</h1>
+            <button class="btn">
+                + Nuevo pedido
+            </button>
+        </div>
+
+        <div class="card">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Cliente</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>001</td>
+                        <td>María Gómez</td>
+                        <td>12/05/2024</td>
+                        <td><span class="badge pendiente">Pendiente</span></td>
+                        <td><button class="btn-view">Ver</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>002</td>
+                        <td>Laura Sánchez</td>
+                        <td>12/05/2024</td>
+                        <td><span class="badge proceso">En proceso</span></td>
+                        <td><button class="btn-view">Ver</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>003</td>
+                        <td>Ana Torres</td>
+                        <td>11/05/2024</td>
+                        <td><span class="badge pendiente">Pendiente</span></td>
+                        <td><button class="btn-view">Ver</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>004</td>
+                        <td>Carlos Ruiz</td>
+                        <td>11/05/2024</td>
+                        <td><span class="badge entregado">Entregado</span></td>
+                        <td><button class="btn-view">Ver</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>005</td>
+                        <td>Pablo Martínez</td>
+                        <td>10/05/2024</td>
+                        <td><span class="badge proceso">En proceso</span></td>
+                        <td><button class="btn-view">Ver</button></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
