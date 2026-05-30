@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vainilla Repostería</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<a href="catalogo.html"></a>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+color:#555;
+background:#fff;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+border-bottom:1px solid #f1e6e6;
+background:white;
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+font-size:32px;
+color:#d78ca3;
+}
+
+.logo span{
+display:block;
+font-size:10px;
+letter-spacing:2px;
+color:#999;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:#666;
+font-size:14px;
+}
+
+.social{
+display:flex;
+gap:10px;
+}
+
+.social a{
+text-decoration:none;
+padding:10px 14px;
+border-radius:50px;
+color:white;
+font-size:13px;
+font-weight:600;
+}
+
+.ig{
+background:#E1306C;
+}
+
+.wa{
+background:#25D366;
+}
+
+/* HERO */
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+padding:70px 8%;
+background:#faf4f4;
+gap:40px;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:58px;
+line-height:1.1;
+color:#4a2c2c;
+margin-bottom:20px;
+}
+
+.hero p{
+margin-bottom:18px;
+line-height:1.8;
+font-size:16px;
+}
+
+.btn{
+display:inline-block;
+background:#d78ca3;
+color:white;
+padding:14px 28px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#c67891;
+}
+
+.hero img{
+width:100%;
+max-width:550px;
+display:block;
+margin:auto;
+border-radius:10px;
+}
+
+
+
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:38px;
+text-align:center;
+margin-bottom:20px;
+color:#4a2c2c;
+}
+
+
+
+.features{
+padding:80px 8%;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:40px;
+}
+
+.card{
+border:1px solid #f1e6e6;
+padding:30px;
+text-align:center;
+border-radius:10px;
+background:white;
+}
+
+.card .icon{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.card h3{
+font-size:17px;
+color:#444;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:14px;
+line-height:1.6;
+}
+
+
+
+.about{
+padding:80px 8%;
+background:white;
+}
+
+.about-content{
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.about p{
+margin-bottom:20px;
+line-height:1.9;
+}
+
+
+
+.cta{
+padding:80px 8%;
+text-align:center;
+background:#faf4f4;
+}
+
+.cta h2{
+font-family:'Playfair Display',serif;
+font-size:42px;
+color:#4a2c2c;
+margin-bottom:15px;
+}
+
+.cta p{
+max-width:800px;
+margin:0 auto 30px;
+line-height:1.8;
+}
+
+
+
+footer{
+background:#d78ca3;
+color:white;
+padding:40px 8%;
+}
+
+.footer-content{
+display:flex;
+justify-content:space-between;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.footer-col{
+flex:1;
+min-width:220px;
+}
+
+.footer-col h3,
+.footer-col h4{
+margin-bottom:15px;
+}
+
+.footer-col a{
+display:block;
+color:white;
+text-decoration:none;
+margin-bottom:10px;
+}
+
+.footer-col p{
+line-height:1.8;
+}
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.cards{
+grid-template-columns:repeat(2,1fr);
+}
+
+nav{
+display:none;
+}
+}
+
+@media(max-width:600px){
+
+.hero h1{
+font-size:40px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.footer-content{
+flex-direction:column;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Vainilla
+<span>REPOSTERÍA</span>
+</div>
+
+<nav>
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="cotizacion.html">Cotización</a></li>
+        <li><a href="sistema de agendamiento.html">Agendamiento</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+</nav>
+
+<div class="social">
+
+<a
+href="https://instagram.com/vainillareposteria_art"
+target="_blank"
+class="ig">
+Instagram
+</a>
+
+<a
+href="https://wa.me/573146918215"
+target="_blank"
+class="wa">
+WhatsApp
+</a>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>
+Endulzamos<br>
+tus momentos
+</h1>
+
+<p>
+Creamos tortas personalizadas, cupcakes y postres únicos para celebrar los momentos más importantes de tu vida.
+</p>
+
+<p>
+Cada creación es elaborada artesanalmente con ingredientes de primera calidad, cuidando cada detalle para que el sabor y la presentación sean inolvidables.
+</p>
+
+<p>
+Ya sea un cumpleaños, boda, aniversario, bautizo o evento empresarial, diseñamos una propuesta exclusiva para ti.
+</p>
+
+<a
+href="https://wa.me/5491123456789?text=Hola,%20quiero%20cotizar%20una%20torta"
+target="_blank"
+class="btn">
+Cotiza tu torta
+</a>
+
+</div>
+
+<div>
+
+<img
+src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200"
+alt="Torta personalizada">
+
+</div>
+
+</section>
+
+<section class="features">
+
+<h2 class="section-title">
+Nuestras especialidades
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🧁</div>
+<h3>Ingredientes Premium</h3>
+<p>
+Seleccionamos cuidadosamente cada ingrediente para garantizar sabor y frescura.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🎨</div>
+<h3>Diseños Personalizados</h3>
+<p>
+Creamos tortas únicas inspiradas en tus ideas y necesidades.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">❤️</div>
+<h3>Hechas con Amor</h3>
+<p>
+Cada pedido es preparado artesanalmente con dedicación y pasión.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🎂</div>
+<h3>Para Toda Ocasión</h3>
+<p>
+Cumpleaños, bodas, aniversarios, baby showers y mucho más.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="about">
+
+<div class="about-content">
+
+<h2 class="section-title">
+Más que una torta, una experiencia
+</h2>
+
+<p>
+En Vainilla Repostería creemos que cada celebración merece un postre memorable. Por eso trabajamos junto a nuestros clientes para crear diseños exclusivos que reflejen su personalidad y estilo.
+</p>
+
+<p>
+Nos apasiona combinar creatividad, sabor y calidad para ofrecer productos que sorprendan tanto por su apariencia como por su delicioso sabor.
+</p>
+
+<p>
+Nuestro compromiso es acompañarte desde la idea inicial hasta la entrega final para que disfrutes una experiencia única y sin preocupaciones.
+</p>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>
+¿Lista para pedir la torta de tus sueños?
+</h2>
+
+<p>
+Cuéntanos qué tienes en mente, cuántos invitados tendrás y qué estilo deseas. Te ayudaremos a diseñar una propuesta personalizada que hará especial tu celebración.
+</p>
+
+<a
+href="https://wa.me/5491123456789?text=Hola,%20quiero%20información%20sobre%20sus%20tortas"
+target="_blank"
+class="btn">
+Escríbenos por WhatsApp
+</a>
+
+</section>
+
+<footer>
+
+<div class="footer-content">
+
+<div class="footer-col">
+
+<h3>Vainilla Repostería</h3>
+
+<p>
+Tortas y postres personalizados elaborados con amor para convertir cada celebración en un momento inolvidable.
+</p>
+
+</div>
+
+<div class="footer-col">
+
+<h4>Síguenos</h4>
+
+<a
+href="https://instagram.com/vainillareposteria_art"
+target="_blank">
+Instagram
+</a>
+
+</div>
+
+<div class="footer-col">
+
+<h4>Contacto</h4>
+
+<a
+href="https://wa.me/+57 314 6918215"
+target="_blank">
+Escríbenos por WhatsApp
+</a>
+
+<p>
+Atendemos pedidos personalizados y cotizaciones durante toda la semana.
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
