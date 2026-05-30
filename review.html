@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviews y Calificaciones</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#faf7f8;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 30px;
+    background:white;
+    border-bottom:1px solid #eee;
+}
+
+.logo{
+    font-size:28px;
+    color:#d97c96;
+    font-weight:700;
+    font-style:italic;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#666;
+    font-size:14px;
+}
+
+.nav-links a.active{
+    color:#d97c96;
+    font-weight:600;
+}
+
+.cart{
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* REVIEWS */
+
+.reviews-section{
+    padding:50px 20px;
+    text-align:center;
+    background:white;
+}
+
+.reviews-section h1{
+    font-size:34px;
+    color:#333;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#888;
+    margin-bottom:30px;
+}
+
+.review-btn{
+    background:#d97c96;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.top-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border:1px solid #eee;
+    border-radius:12px;
+    padding:20px;
+    text-align:left;
+    box-shadow:0 3px 10px rgba(0,0,0,.04);
+}
+
+.user{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:15px;
+}
+
+.user img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+
+.user h4{
+    font-size:15px;
+}
+
+.user span{
+    font-size:12px;
+    color:#999;
+}
+
+.stars{
+    color:#F4B400;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#555;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.dots{
+    margin-top:30px;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    display:inline-block;
+    background:#d8d8d8;
+    margin:0 4px;
+}
+
+.dot.active{
+    background:#c97c93;
+}
+
+/* DESTACADAS */
+
+.featured{
+    background:#d88ca3;
+    padding:35px;
+    color:white;
+}
+
+.featured-title{
+    text-align:center;
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+.featured-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.featured-card{
+    background:white;
+    color:#333;
+    padding:18px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.featured-card img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+}
+
+.featured-card h4{
+    font-size:14px;
+}
+
+.featured-card p{
+    font-size:12px;
+    color:#777;
+}
+
+@media(max-width:900px){
+
+    .cards,
+    .featured-cards{
+        grid-template-columns:1fr;
+    }
+
+    .top-row{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <nav class="navbar">
+        <div class="logo">Vainilla</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="cotizacion.html" class="active">Cotizaciones</a></li>
+            <li><a href="sistema de agendamiento.html">Agendamientos</a></li>
+            <li><a href="review.html">Reviews</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+
+        <div class="cart">🛒</div>
+    </nav>
+
+    <section class="reviews-section">
+
+        <div class="top-row">
+            <div>
+                <h1>Lo que dicen nuestros clientes</h1>
+                <p class="subtitle">
+                    Tu opinión nos ayuda a seguir mejorando
+                </p>
+            </div>
+
+            <button class="review-btn">
+                Dejar mi review
+            </button>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="user">
+                    <img src="https://i.pravatar.cc/100?img=5">
+                    <div>
+                        <h4>María Fernanda</h4>
+                        <span>10/10/2024</span>
+                    </div>
+                </div>
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    La torta quedó hermosa y deliciosa,
+                    superó mis expectativas.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="user">
+                    <img src="https://i.pravatar.cc/100?img=12">
+                    <div>
+                        <h4>Laura Gómez</h4>
+                        <span>12/10/2024</span>
+                    </div>
+                </div>
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    Excelente atención y sabores increíbles.
+                    Volvería a pedir sin duda.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="user">
+                    <img src="https://i.pravatar.cc/100?img=15">
+                    <div>
+                        <h4>Carlos Ramírez</h4>
+                        <span>14/10/2024</span>
+                    </div>
+                </div>
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    Muy buen servicio y entrega puntual.
+                    La torta estaba deliciosa.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </section>
+
+    <section class="featured">
+
+        <h3 class="featured-title">
+            ⭐ Reviews Destacadas
+        </h3>
+
+        <div class="featured-cards">
+
+            <div class="featured-card">
+                <img src="https://i.pravatar.cc/100?img=25">
+                <div>
+                    <h4>Ana Torres</h4>
+                    <p>Hermoso diseño y sabor espectacular.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="featured-card">
+                <img src="https://i.pravatar.cc/100?img=32">
+                <div>
+                    <h4>Mariana Ríos</h4>
+                    <p>Excelente, 100% recomendado.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="featured-card">
+                <img src="https://i.pravatar.cc/100?img=40">
+                <div>
+                    <h4>Felipe Castro</h4>
+                    <p>La mejor pastelería de la ciudad.</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>
