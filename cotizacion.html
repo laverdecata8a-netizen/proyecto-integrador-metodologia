@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización de Torta</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>Vanilla</h2>
+            <p>REPOSTERÍA</p>
+        </div>
+
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Catálogo</a>
+            <a href="#" class="activo">Cotización</a>
+            <a href="#">Agendamiento</a>
+            <a href="#">Reviews</a>
+            <a href="#">Contacto</a>
+        </nav>
+
+        <div class="carrito">
+            🛒
+        </div>
+
+    </header>
+
+    <section class="titulo">
+        <h1>Cotización de torta</h1>
+        <p>Cuéntanos cómo la sueñas y haremos realidad tu idea</p>
+    </section>
+    <main class="contenedor">
+
+        <form action="#" class="formulario">
+
+            <div class="caja">
+                <h3>Datos personales</h3>
+
+                <div class="fila">
+                    <div class="input-group">
+                        <label>Nombre completo.</label>
+                        <input type="text" placeholder="Digite su nombre completo:" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Teléfono.</label>
+                        <input type="number" placeholder="Digite su número de teléfono:" required>
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+                    <label>Correo electrónico.</label>
+                    <input type="email"placeholder="Digite su correo elctrónico:"required>
+                </div>
+
+            </div>
+
+            <div class="caja">
+                <h3>Detalles de la torta</h3>
+                <div class="fila">
+                    <div class="input-group">
+
+                        <label>Tamaño.</label>
+
+                        <select required>
+                            <option value="">
+                                Seleccione tamaño por porciones:
+                            </option>
+
+                            <option>Pequeña de 6 a 10 porciones.</option>
+                            <option>Mediana de 12 a 15 porciones.</option>
+                            <option>Grande de 20 a 22 porciones.</option>
+                        </select>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Sabor.</label>
+
+                        <select required>
+                            <option value="">
+                                Seleccione un sabor:
+                            </option>
+
+                            <option>Chocolate.</option>
+                            <option>Vainilla.</option>
+                            <option>Red Velvet.</option>
+                            <option>Maracuyá.</option>
+                            <option>Oreo.</option>
+                            <option>Arequipe.</option>
+                            <option>Zanahoria.</option>
+                            <option>Coco.</option>
+                            <option>Frutos rojos.</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+                    <label>Descripción.</label>
+                    <textarea placeholder="Describe el diseño de la torta..." required></textarea>
+                </div>
+
+            </div>
+
+            <div class="caja">
+
+                <h3>Imágenes de referencia</h3>
+
+                <p> Puedes subir imágenes para mostrar tu idea.</p>
+
+                <div class="subir">
+                    <input type="file">
+                </div>
+
+            </div>
+            
+            <div class="boton">
+                <button type="submit"> Enviar solicitud </button>
+            </div>
+
+        </form>
+
+        <aside class="info">
+            <div class="card">
+                <div class="icono"> </div>
+                <h3>Resumen de tu solicitud</h3>
+                <p> Cuando envíes la solicitud nos comunicaremos contigo para confirmar los detalles de la torta. </p>
+            </div>
+
+            <div class="card rosada">
+                <h3>Información importante</h3>
+                <ul>
+                    <li> Todos los pedidos están sujetos a disponibilidad.</li>
+                    <li> La respuesta puede tardar hasta 24 horas.</li>
+                    <li> Las imágenes son solo referencias.</li>
+                </ul>
+            </div>
+        </aside>
+
+    </main>
+</body>
+</html>
