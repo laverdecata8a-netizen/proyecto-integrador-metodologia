@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agendamiento de Entrega</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#faf7f7;
+color:#555;
+}
+
+
+header{
+background:white;
+padding:18px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #f0e5e5;
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+font-size:30px;
+color:#d78ca3;
+}
+
+.logo span{
+display:block;
+font-size:10px;
+letter-spacing:2px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:28px;
+}
+
+nav a{
+text-decoration:none;
+color:#666;
+font-size:14px;
+}
+
+.active{
+color:#d78ca3;
+font-weight:600;
+}
+
+/* CONTENEDOR */
+
+.container{
+max-width:1200px;
+margin:40px auto;
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 0 20px rgba(0,0,0,.04);
+}
+
+.title{
+text-align:center;
+margin-bottom:35px;
+}
+
+.title h1{
+font-size:34px;
+font-family:'Playfair Display',serif;
+color:#4a2c2c;
+margin-bottom:8px;
+}
+
+.title p{
+color:#888;
+}
+
+
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:start;
+}
+
+
+
+.form-box{
+border:1px solid #f1e6e6;
+padding:25px;
+border-radius:10px;
+}
+
+.form-group{
+margin-bottom:18px;
+}
+
+label{
+display:block;
+font-size:14px;
+font-weight:500;
+margin-bottom:8px;
+color:#555;
+}
+
+input,
+textarea,
+select{
+width:100%;
+padding:14px;
+border:1px solid #eadede;
+border-radius:8px;
+font-size:14px;
+outline:none;
+}
+
+input:focus,
+textarea:focus{
+border-color:#d78ca3;
+}
+
+textarea{
+resize:none;
+height:90px;
+}
+
+
+
+.image-box{
+text-align:center;
+}
+
+.image-box img{
+width:100%;
+max-width:360px;
+margin:auto;
+display:block;
+}
+
+.notice{
+margin-top:25px;
+background:#fff4f6;
+border:1px solid #f4d8df;
+padding:20px;
+border-radius:10px;
+text-align:left;
+}
+
+.notice h3{
+font-size:15px;
+color:#d78ca3;
+margin-bottom:10px;
+}
+
+.notice p{
+font-size:14px;
+line-height:1.7;
+}
+
+
+
+.actions{
+margin-top:25px;
+}
+
+.btn{
+width:100%;
+padding:15px;
+border:none;
+background:#d78ca3;
+color:white;
+font-size:15px;
+font-weight:600;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+background:#c77990;
+}
+
+
+
+@media(max-width:900px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.container{
+margin:20px;
+padding:25px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+Vainilla
+<span>REPOSTERÍA</span>
+</div>
+
+<nav>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="catalogo.html">Catálogo</a></li>
+<li><a href="cotizacion.html" class="active">Cotización</a></li>
+<li><a href="sistema de agendamiento.html">Agendamiento</a></li>
+<li><a href="review.html">Reviews</a></li>
+<li><a href="#">Contacto</a></li>
+</ul>
+</nav>
+
+<div style="font-size:22px;color:#c79a9a;">
+🛒
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="title">
+<h1>Agendamiento de entrega</h1>
+<p>Programa la entrega de tu pedido</p>
+</div>
+
+<div class="grid">
+
+
+
+<div class="form-box">
+
+<div class="form-group">
+<label>Fecha de entrega *</label>
+<input type="date">
+</div>
+
+<div class="form-group">
+<label>Hora de entrega *</label>
+<input type="time">
+</div>
+
+<div class="form-group">
+<label>Dirección de entrega *</label>
+<input
+type="text"
+placeholder="Ingresa la dirección completa">
+</div>
+
+<div class="form-group">
+<label>Referencias (opcional)</label>
+<textarea placeholder="Puntos de referencia para facilitar la entrega"></textarea>
+</div>
+
+<div class="actions">
+<button class="btn">
+Guardar agendamiento
+</button>
+</div>
+
+</div>
+
+
+
+<div>
+
+<div class="image-box">
+
+<img
+src="https://cdn-icons-png.flaticon.com/512/869/869636.png"
+alt="Entrega">
+
+</div>
+
+<div class="notice">
+
+<h3>Recuerda:</h3>
+
+<p>
+Asegúrate de que alguien esté disponible
+en la dirección para recibir el pedido.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
